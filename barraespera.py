@@ -5,12 +5,14 @@ def mostrar_Progreso_Barra (iteracion, total, prefijo = '', sufijo = '', decimal
     porcentaje = ("{0:." + str(decimal) + "f}").format(100 * (iteracion / float(total)))
     filledLength = int(longitud * iteracion // total)
     bar = fill * filledLength + '-' * (longitud - filledLength)
-    
+    print'\r%s โ%sโ  %s%% %s' % prefijo, bar, porcentaje, sufijo, end = '\r\r\r'
     # Imprimir nuevo caracter 
+
 
     if iteracion == total: 
         print()
-    print('\r%s โ%sโ %s%% %s' % (prefijo, bar, porcentaje, sufijo), end = '\r\r\r')    
+
+       
 
 
 
