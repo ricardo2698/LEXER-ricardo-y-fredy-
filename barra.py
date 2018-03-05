@@ -11,21 +11,6 @@ def mostrar_Progreso_Barra (iteracion, total, prefijo = '', sufijo = '', decimal
 
     if iteracion == total: 
         print()
-
-       
-
-"""
-caracteres = list(range(0, 50))
-l = len(caracteres)
-
-#  muestra desde  0%
-
-for i, caracteres in enumerate(caracteres):
-    # Do stuff...
-    sleep(0.1)
-    # Actualizando el proseco de barra
-    mostrar_Progreso_Barra(i + 1, l, prefijo = 'Progreso:', sufijo = 'Completado', longitud = 50)
-"""
 def esperar():
     caracteres = list(range(0, 50))
     l = len(caracteres)
