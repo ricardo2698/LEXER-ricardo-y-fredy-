@@ -6,7 +6,6 @@ def lexer(texto, token_exprsiones,i):
     #print len(characters)
     
     
-    #print len(characters)
     pos = 0
     tokens = []
     while pos < len(texto):
@@ -24,9 +23,9 @@ def lexer(texto, token_exprsiones,i):
                     #print "que paso"
                     token = (text, etiqueta)
                     tokens.append(token)
-                    #print tokens,"linea ",i
+                    
                 break
-        if not match:
+        if not match:            # si no esta en el patron de tokens  muestra el error
 
             ilegal=texto
             sys.stderr.write('Eroor!!! Illegal character (%s)\n' % ilegal[pos])
@@ -42,7 +41,7 @@ def lexer(texto, token_exprsiones,i):
             pos = match.end(0)
         #print pos
     if tokens:
-        print (tokens ,"Token en la Linea ",i+1," \n           ¶ Correto Linea ",i+1)  
+        print (tokens ,"Token en la Linea ",i+1," Correto ¶")  
 
     return tokens
     

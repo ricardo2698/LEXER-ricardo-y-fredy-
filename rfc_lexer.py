@@ -4,7 +4,7 @@ import lexer
 RESERVADO = 'RESERVADO'
 ENTERO   = 'N_ENTERO'
 VARIABLE = 'VARIABLE'
-FLOTANTE = 'FLOTANTE'
+#FLOTANTE = 'FLOTANTE'
 BOOLEANO ='BOOL'
 #todas las espresiones de entero, reservadas y identificadoras
 token_exprsiones = [
@@ -37,8 +37,10 @@ token_exprsiones = [
     (r'fin',                   RESERVADO),
     (r'VERDADERO',             BOOLEANO),
     (r'FALSO',                 BOOLEANO), 
-    (r'[0-9]+',                ENTERO),
+    (r'[0-9]+' ,                ENTERO),
+    #(r'[+-]?\d+(\.\d+|[eE][+-]?\d+)?',     FLOTANTE),
     (r'[A-Za-z][A-Za-z0-9_]*', VARIABLE),
+    
 ]
 
 def rfc_lexer(texto,i):
