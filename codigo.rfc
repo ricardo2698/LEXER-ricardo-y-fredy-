@@ -2,12 +2,12 @@
 
 
 
-a <- 555
+a <- 555 5asignar
 5 <- 55
  algorito
 si a mayor b
   o <- FALSO
-  ab <- c
+  #ab <- c
   ab <- VERDADERO
   correr <- 3+6
 fin

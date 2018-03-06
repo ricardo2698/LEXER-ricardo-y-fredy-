@@ -17,9 +17,8 @@ if __name__ == '__main__':
     print("  ********************************************************************")
     print("\n\n")
 
-    archivo = open("codigo.rfc", "r")
-    #esperar()
-
+    archivo = open("codigo.rfc", "r")  #abrimos el archivoW
+    
     texto = []
     for linea in archivo:
     	texto.append(linea.strip())   #Guarda Linea por Linea en una lista
@@ -27,8 +26,9 @@ if __name__ == '__main__':
 
     for i in range(len(texto)):      # mandamos a evaluar cada linea de codigo , para ser evaluado con   nuesra regla del lenguaje
     	if texto[i] :
-            esperar()
-    	tokens = rfc_lexer(texto[i],i) 
+            esperar()                   #imprimimos la barra
+            rfc_lexer(texto[i],i)       # evaluamos cada linea del codigo
+    	 
 
 
     

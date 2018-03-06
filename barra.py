@@ -1,10 +1,10 @@
 from time import sleep
 
-def mostrar_Progreso_Barra (iteracion, total, prefijo = '', sufijo = '', decimal = 1, longitud = 100, fill = '█'):
+def mostrar_Progreso_Barra (iteracion, total, prefijo = '', sufijo = '', decimal = 1, longitud = 0, ASCII = '█'):
    
     porcentaje = ("{0:." + str(decimal) + "f}").format(100 * (iteracion / float(total)))
     filledLength = int(longitud * iteracion // total)
-    bar = fill * filledLength + '-' * (longitud - filledLength)
+    bar = ASCII * filledLength + '-' * (longitud - filledLength)
     print('\r%s .%s.  %s%% %s' % (prefijo, bar, porcentaje, sufijo), end = '\r\r\r')
     # Imprimir nuevo caracter 
 
@@ -18,7 +18,6 @@ def esperar():
     #  muestra desde  0%
 
     for i, caracteres in enumerate(caracteres):
-        # Do stuff...
         sleep(0.02)
         # Actualizando el proseco de barra
-        mostrar_Progreso_Barra(i + 1, l, prefijo = 'Progreso:', sufijo = 'Completado', longitud = 50)
+        mostrar_Progreso_Barra(i + 1, l, prefijo = 'Progreso:', sufijo = 'Completado', longitud = 40)

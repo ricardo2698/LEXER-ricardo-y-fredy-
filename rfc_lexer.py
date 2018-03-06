@@ -1,5 +1,6 @@
+from lexer import *
 
-import lexer
+
 
 RESERVADO = 'RESERVADO'
 ENTERO   = 'N_ENTERO'
@@ -44,4 +45,4 @@ token_exprsiones = [
 ]
 
 def rfc_lexer(texto,i):
-    return lexer.lexer(texto, token_exprsiones,i)
+    return lexer(texto, token_exprsiones,i)
