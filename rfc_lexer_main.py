@@ -6,7 +6,7 @@ from time import sleep
 
 if __name__ == '__main__':
     archivo = open("codigo.rfc", "r")
-    #esperar()      # se llama ala funcion que muestra la barras de espera
+    #esperar()
 
     texto = []
     for linea in archivo:
@@ -14,11 +14,10 @@ if __name__ == '__main__':
     archivo.close()
 
     for i in range(len(texto)):      # mandamos a evaluar cada linea de codigo , para ser evaluado con   nuesra regla del lenguaje
-    	esperar()
-    	#tokens = rfc_lexer(texto[i],i) 
+    	if texto[i]: 
+    		esperar()
+    	tokens = rfc_lexer(texto[i],i) 
 
 
     
-
-
 
