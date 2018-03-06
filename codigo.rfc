@@ -2,11 +2,13 @@
 
 
 
-
-@ddfdfd
-si (a mayor b)
+a <- 555
+5 <- 55
+ algorito
+si a mayor b
   o <- FALSO
   ab <- c
   ab <- VERDADERO
+  correr <- 3+6
 fin
 
